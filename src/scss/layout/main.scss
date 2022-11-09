@@ -1,0 +1,37 @@
+.page {
+  margin: 0 auto;
+}
+.game {
+}
+.game__timer {
+  display: block;
+  align-items: center;
+  justify-content: center;
+}
+.game__timer-length {
+  background-color: red;
+}
+.game__timer-minutes {
+  margin: 10px;
+}
+.game__block {
+  height: 100%;
+  padding-top: 23px;
+  display: block;
+}
+.game__block__title {
+}
+.game__block__numberGamer {
+}
+
+.game__conteiner {
+  width: 500px;
+  height: 500px;
+  text-align: center;
+}
+
+
+.game__block-input {
+}
+.game__block-btn {
+}
