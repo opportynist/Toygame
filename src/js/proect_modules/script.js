@@ -1,44 +1,52 @@
-let masTown = ["sssss", "gggg", "ffff", "lkdyyeg"];
-let input = document.querySelector("input");
-let btn = document.querySelector("button");
-btn.addEventListener("click", funct);
+import { lastWordOfMasTown } from "./function";
+import { lastWord } from "./function";
+import { firstWord } from "./function";
+import { showLastWorld } from "./function";
+import { showErrorRepet } from "./function";
+import { showErrorWord } from "./function";
+import { Timer } from "./timer";
+import { funStart } from "./startGame";
 
-function funct() {
-  let val = input.value.toLowerCase();
-  if (masTown.length == 0) {
-    masTown.push(val);
-  } else if (masTown.length > 0) {
-    let oneWord = lastWordOfMasTown();
-    let towWord = firstWord(val);
+export function mainFan() {
+  let masTown = [];
+  const input = document.querySelector(".game__block-input");
+  const btn = document.querySelector(".game__block-btn");
+  let allmain = document.querySelector(".game");
+  let lestWord = allmain.querySelector(".last-word");
+  const animationTimer = allmain.querySelector(".game__timer-length");
+  const startGame = document.querySelector(".page__start__game");
+  startGame.addEventListener("click", funStart(allmain, startGame));
 
-    if (oneWord == towWord) {
+  btn.addEventListener("click", fanMain);
+  btn.addEventListener("click", Timer);
+
+  input.addEventListener("focus", function () {
+    input.value = "";
+  });
+
+  function fanMain() {
+    let val = input.value.toLowerCase().trim();
+
+    if (masTown.length == 0 && val.length > 0) {
+      masTown.push(val);
+
+      showLastWorld(masTown, lestWord);
+    } else if (masTown.length > 0) {
+      let oneWord = lastWordOfMasTown(masTown);
+
+      let towWord = firstWord(val);
+
       let s = masTown.includes(val);
-      if (!s) {
+      if (oneWord == towWord && !s) {
         masTown.push(val);
+        showLastWorld(masTown, lestWord);
       } else if (s) {
-        console.log("элемент уже есть ");
+        showErrorRepet(val, lestWord);
+      } else if (oneWord != towWord) {
+        showErrorWord(oneWord, towWord, lestWord);
       }
-      console.log(masTown);
     }
+
+    console.log(masTown);
   }
 }
-
-function lastWordOfMasTown() {
-  let lastTown = "";
-  for (let i = 0; i < masTown.length; i++) {
-    lastTown = masTown[i];
-  }
-
-  let lastw = lastWord(lastTown);
-  return lastw;
-}
-
-function lastWord(arg) {
-  return arg.substr(arg.length - 1);
-}
-
-function firstWord(arg) {
-  return arg[0];
-}
-
- 

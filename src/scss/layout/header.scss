@@ -1,6 +1,4 @@
 .header {
- 
-
 }
 .header__wrapper {
 }
@@ -11,7 +9,6 @@
 .header__body {
 }
 .header__main {
-
   display: flex;
 }
 .logo {
@@ -25,5 +22,7 @@
   display: flex;
   li {
     margin-left: 20px;
+    font-size: 21px;
+    font-weight: 900;
   }
 }

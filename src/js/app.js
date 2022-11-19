@@ -1,8 +1,5 @@
-import * as flsFunctions from "./modules";
-import * as HoverTachscrin from "./modules/script";
+import * as mainFan from "./proect_modules/script";
 
 /* Раскомментировать для использования */
 // import Swiper, { Navigation, Pagination } from 'swiper'
-
-flsFunctions.isWebp();
-HoverTachscrin.HoverTachscrin();
+mainFan.mainFan();
