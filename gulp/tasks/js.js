@@ -1,5 +1,5 @@
-import webpack from 'webpack-stream'
-import { webpackConfig } from '../../webpack.config.js'
+import webpack from "webpack-stream";
+import { webpackConfig } from "../../webpack.config.js";
 
 export const js = () =>
   app.gulp
@@ -7,11 +7,11 @@ export const js = () =>
     .pipe(
       app.plugins.plumber(
         app.plugins.notify.onError({
-          title: 'JS',
-          message: 'Error: <%= error.message %>',
+          title: "JS",
+          message: "Error: <%= error.message %>",
         })
       )
     )
     .pipe(webpack({ config: webpackConfig(app.isDev) }))
     .pipe(app.gulp.dest(app.path.build.js))
-    .pipe(app.plugins.browserSync.stream())
+    .pipe(app.plugins.browserSync.stream());

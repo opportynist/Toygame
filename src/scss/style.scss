@@ -4,10 +4,12 @@
 @import "config/reset";
 @import "config/scrollbar";
 @import "config/global";
-@import "config/ul";
+
 @import "config/icons";
+@import "../../node_modules/swiper/swiper";
 
 @import "layout/header";
 @import "layout/footer";
 @import "layout/main";
 @import "layout/modal";
+@import "config/ul";

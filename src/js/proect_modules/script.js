@@ -6,47 +6,65 @@ import { showErrorRepet } from "./function";
 import { showErrorWord } from "./function";
 import { Timer } from "./timer";
 import { funStart } from "./startGame";
+import { startTimer } from "./timer";
+import { showError } from "./showError";
 
 export function mainFan() {
-  let masTown = [];
+  //the main array
+  let arrayAllTown = [];
   const input = document.querySelector(".game__block-input");
   const btn = document.querySelector(".game__block-btn");
-  let allmain = document.querySelector(".game");
-  let lestWord = allmain.querySelector(".last-word");
-  const animationTimer = allmain.querySelector(".game__timer-length");
+  const allmain = document.querySelector(".game");
+  const outputLastWowd = allmain.querySelector(".last-word");
   const startGame = document.querySelector(".page__start__game");
-  startGame.addEventListener("click", funStart(allmain, startGame));
 
+  // animation of the timer at the start
+  startGame.addEventListener("click", funStart);
+  // launching the check and add function
   btn.addEventListener("click", fanMain);
+
+  // starting the timer function
   btn.addEventListener("click", Timer);
 
+  // getting the last letter of the last word in the array
+
+  // deleting input
   input.addEventListener("focus", function () {
     input.value = "";
   });
+  input.addEventListener("input", function () {
+    showError(arrayAllTown);
+  });
 
+  //  the check and add function
   function fanMain() {
     let val = input.value.toLowerCase().trim();
+    let firstLetterTown = lastWordOfMasTown(arrayAllTown);
+    // getting the first letter in input
+    let firstLatter = firstWord(val);
+    // checking for a match
+    let checkWord = arrayAllTown.includes(val);
+    console.log(val);
 
-    if (masTown.length == 0 && val.length > 0) {
-      masTown.push(val);
+    // check 1
+    if (arrayAllTown.length == 0 && val.length > 0) {
+      arrayAllTown.push(val);
 
-      showLastWorld(masTown, lestWord);
-    } else if (masTown.length > 0) {
-      let oneWord = lastWordOfMasTown(masTown);
+      // showing the last word in the array
+      showLastWorld(arrayAllTown, outputLastWowd);
+      // check 2
+    } else if (arrayAllTown.length > 0) {
+      if (firstLetterTown == firstLatter && !checkWord) {
+        arrayAllTown.push(val);
 
-      let towWord = firstWord(val);
-
-      let s = masTown.includes(val);
-      if (oneWord == towWord && !s) {
-        masTown.push(val);
-        showLastWorld(masTown, lestWord);
-      } else if (s) {
-        showErrorRepet(val, lestWord);
-      } else if (oneWord != towWord) {
-        showErrorWord(oneWord, towWord, lestWord);
+        showLastWorld(arrayAllTown, outputLastWowd);
+      } else if (checkWord) {
+        // error output
+        showErrorRepet(val, outputLastWowd);
+      } else if (firstLetterTown != firstLatter) {
+        // error output
+        showErrorWord(firstLetterTown, outputLastWowd);
       }
     }
-
-    console.log(masTown);
   }
 }

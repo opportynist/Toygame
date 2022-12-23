@@ -25,6 +25,6 @@ export function showLastWorld(el, block) {
 export function showErrorRepet(val, block) {
   block.textContent = `Это слово уже было ${val}`;
 }
-export function showErrorWord(oneWord, towWord, block) {
-  block.textContent = `Последние буквы не совпадают вы ввели ${towWord}  нужно ${oneWord}`;
+export function showErrorWord(oneWord, block) {
+  block.textContent = `Слово должно начинаться с ${oneWord}`;
 }

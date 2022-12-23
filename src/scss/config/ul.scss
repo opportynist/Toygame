@@ -1,1 +1,16 @@
- 
+._active {
+  display: block;
+}
+
+._error {
+  animation: erroi 1s linear 0s infinite normal none;
+}
+
+@keyframes erroi {
+  from {
+    background-color: "";
+  }
+  to {
+    background-color: tomato;
+  }
+}
