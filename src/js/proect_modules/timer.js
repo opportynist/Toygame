@@ -21,7 +21,7 @@ export function fanAminationTimer() {
 let secon = timerNumber.querySelector(".second");
 let min = timerNumber.querySelector(".min");
 
-export function timeStar(minutes = 1, seconds = 1) {
+export function timeStar(minutes, seconds) {
   let flag = true;
   let interval;
   let minut = minutes;
