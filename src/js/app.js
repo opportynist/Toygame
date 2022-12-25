@@ -71,3 +71,20 @@ const swiper = new Swiper(".swiper", {
   //   },
 });
 mainFan();
+// let city = [];
+
+// const dataFromPromise = () => {
+//   fetch(
+//     "https://raw.githubusercontent.com/aZolo77/citiesBase/master/cities.json"
+//   )
+//     .then((resp) => resp.json())
+//     .then((data) => {
+//       init(data);
+//     });
+// };
+
+// function init(data) {
+//   console.log(data);
+// }
+
+// dataFromPromise();

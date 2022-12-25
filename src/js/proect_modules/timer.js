@@ -1,3 +1,4 @@
+ 
 let t = document.querySelector(".game__timer-length");
 const btnTimer = document.querySelector(".game__block-btn");
 const input = document.querySelector(".game__block-input");
@@ -71,3 +72,4 @@ export function timeStar(minutes, seconds) {
     }
   });
 }
+ 

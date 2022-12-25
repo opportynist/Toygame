@@ -8,6 +8,7 @@ import { Timer } from "./timer";
 import { funStart } from "./startGame";
 import { startTimer } from "./timer";
 import { showError } from "./showError";
+import { Gamers } from "./gamer";
 
 export function mainFan() {
   //the main array
@@ -44,9 +45,9 @@ export function mainFan() {
     let firstLatter = firstWord(val);
     // checking for a match
     let checkWord = arrayAllTown.includes(val);
-    console.log(val);
 
     // check 1
+
     if (arrayAllTown.length == 0 && val.length > 0) {
       arrayAllTown.push(val);
 

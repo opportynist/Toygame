@@ -1,5 +1,6 @@
 import { Timer } from "./timer";
 import { timeStar } from "./timer";
+import { Gamers } from "./gamer";
 export function modalWin() {
   let modal = document.getElementById("myModal");
   let checkbox = document.querySelector("#slideThree");
@@ -8,7 +9,7 @@ export function modalWin() {
   let span = document.getElementsByClassName("close")[0];
   let time = modal.querySelector("#timer");
   let bff = document.querySelector(".check_box__div");
-  let gamers = modal.querySelector("#gamers").value.length;
+  let gamers = modal.querySelector("#gamers");
   let timer = document.querySelector(".timer");
   const allmain = document.querySelector(".game");
   const startGame = document.querySelector(".page__start__game");
@@ -43,6 +44,7 @@ export function modalWin() {
       }
     }
     timeStar(time, sec);
+    Gamers();
   };
 
   function showModalWin() {
@@ -61,3 +63,4 @@ export function modalWin() {
   };
   showModalWin();
 }
+ 
