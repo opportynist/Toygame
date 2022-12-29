@@ -9,7 +9,6 @@ import { funStart } from "./startGame";
 import { startTimer } from "./timer";
 import { showError } from "./showError";
 import { Gamers } from "./gamer";
-
 export function mainFan() {
   //the main array
   let arrayAllTown = [];
@@ -19,6 +18,14 @@ export function mainFan() {
   const outputLastWowd = allmain.querySelector(".last-word");
   const startGame = document.querySelector(".page__start__game");
 
+  input.addEventListener("input", function () {
+    if (input.value.length > 0) {
+      btn.style["pointer-events"] = "auto";
+    }
+  });
+  input.addEventListener("focus", function () {
+    btn.style["pointer-events"] = "none";
+  });
   // animation of the timer at the start
   startGame.addEventListener("click", funStart);
   // launching the check and add function

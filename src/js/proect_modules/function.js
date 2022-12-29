@@ -19,7 +19,6 @@ export function firstWord(arg) {
 export function showLastWorld(el, block) {
   let lastWordMssTown = el.length - 1;
   block.textContent = el[lastWordMssTown];
-  console.log(el.length);
 }
 
 export function showErrorRepet(val, block) {

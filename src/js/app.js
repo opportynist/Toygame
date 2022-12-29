@@ -71,6 +71,7 @@ const swiper = new Swiper(".swiper", {
   //   },
 });
 mainFan();
+
 // let city = [];
 
 // const dataFromPromise = () => {

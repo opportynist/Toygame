@@ -1,6 +1,7 @@
 import { showErrorWord } from "./function";
 import { lastWordOfMasTown } from "./function";
 import { firstWord } from "./function";
+
 export function showError(arrayAllTown) {
   let outputLastWowd = document.querySelector(".last-word");
   const btn = document.querySelector(".game__block-btn");

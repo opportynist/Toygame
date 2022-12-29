@@ -66,24 +66,11 @@
     "gulp-webp-html-nosvg": "^1.0.1",
     "gulp-webpcss": "^1.1.1",
     "gulp-zip": "^5.1.0",
-<<<<<<< HEAD
-    "react-hot-loader": "^4.5.3",
-    "sass": "^1.45.1",
-    "swiper": "^7.4.1",
-    "vinyl-ftp": "^0.6.1",
-    "webp-converter": "^2.2.3",
-    "webpack": "^5.75.0",
-    "webpack-stream": "^7.0.0"
-  },
-  "dependencies": {
-    "node-polyfill-webpack-plugin": "^2.0.1"
-=======
     "sass": "^1.45.1",
     "swiper": "^7.3.4",
     "vinyl-ftp": "^0.6.1",
     "webp-converter": "^2.2.3",
     "webpack": "^5.65.0",
     "webpack-stream": "^7.0.0"
->>>>>>> 95d2c130db5d58edede516c68958cd74e6b5ec34
   }
 }

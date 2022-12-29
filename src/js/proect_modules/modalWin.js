@@ -2,7 +2,7 @@ import { Timer } from "./timer";
 import { timeStar } from "./timer";
 import { Gamers } from "./gamer";
 export function modalWin() {
-  let modal = document.getElementById("myModal");
+  let modal = document.getElementById("startModal");
   let checkbox = document.querySelector("#slideThree");
   let timerShow = document.querySelector(".game__timer");
   let btn = modal.querySelector(".btn-timer");
@@ -63,4 +63,3 @@ export function modalWin() {
   };
   showModalWin();
 }
- 
